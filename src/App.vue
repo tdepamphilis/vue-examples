@@ -3,7 +3,6 @@
     <div id="app">
       <nav>
       <hamburguerMenu/>
-      
       </nav>
       <router-view />
     </div>
@@ -14,9 +13,13 @@ import HamburguerMenu from '../src/components/HamburguerMenu.vue'
 export default {
   components: { HamburguerMenu },
     data(){
-        return {        }
+        return {       
+          
+         }
     },
-    methods: {    }
+    methods: {   
+
+     }
 }
 </script>
 

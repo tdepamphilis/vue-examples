@@ -8,7 +8,7 @@
       :close-on-content-click="false"
       :nudge-width="200"
       offset-x
-      @click="mostrarMenu"
+   
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -18,7 +18,7 @@
           v-on="on"
           style="display: flex; align-items: center; justify-content: space-around; margin-left: 20px;"
         >
-          <fa icon="bars" class="hamburguer" />&nbsp;&nbsp;Menú
+          Menú
         </v-btn>
       </template>
 
@@ -36,7 +36,6 @@
 
         <v-divider></v-divider>
         <v-expansion-panels
-        v-model="panel"
         multiple
         style="max-width: 300px;"
         >
@@ -50,7 +49,7 @@
             <v-expansion-panel>
             <v-expansion-panel-header><b>Templates</b></v-expansion-panel-header>
                 <v-expansion-panel-content class="menu-option">
-                    <p v-on:click="selectActualizacionPF()"><fa icon="sticky-note" class="menu-icon" /> DataTable with custom footer</p>
+                    <p v-on:click="selectTableCustomPaginator()"> DataTable with custom paginator</p>
                 </v-expansion-panel-content>              
             </v-expansion-panel>
         </v-expansion-panels>
@@ -66,19 +65,16 @@
 
 <script>
 export default {
+    name: 'HamburguerMenu',
     data(){
         return {
 
         }
     },
     methods: {
-        selectActualizacionPF(){
-            this.$router.push('/actualizacionGrilla')
+        selectTableCustomPaginator(){
+            this.$router.push('/table-custom-paginator')
         },
-        selectModificarValoresRiesgo(){
-            this.$router.push('/modificar-matriz')
-        }
-
     }
 }
 </script>
