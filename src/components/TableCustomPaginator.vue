@@ -55,15 +55,18 @@ export default {
         { nombre: "Roberto", edad: 17, sexo: "M" },
         { nombre: "Carla", edad: 17, sexo: "F" },
         { nombre: "Laura", edad: 17, sexo: "F" },
+        { nombre: "Laura", edad: 17, sexo: "F" },
+        { nombre: "Laura", edad: 17, sexo: "F" },
+        { nombre: "Laura", edad: 17, sexo: "F" },
       ],
     };
   },
   computed: {
     pageCount() {
       if (this.items.length % 5 == 0) {
-        return this.items.length / 5;
+       return Math.floor(this.items.length / 5);
       }
-      return this.items.length / 5 + 1;
+       return Math.floor(this.items.length / 5) + 1;
     },
   },
 };
