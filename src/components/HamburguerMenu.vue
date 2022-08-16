@@ -50,6 +50,9 @@
             <v-expansion-panel-header><b>Templates</b></v-expansion-panel-header>
                 <v-expansion-panel-content class="menu-option">
                     <p v-on:click="selectTableCustomPaginator()"> DataTable with custom paginator</p>
+                </v-expansion-panel-content>
+                <v-expansion-panel-content class="menu-option">
+                    <p v-on:click="selectTransition()"> Transition</p>
                 </v-expansion-panel-content>              
             </v-expansion-panel>
         </v-expansion-panels>
@@ -75,6 +78,9 @@ export default {
         selectTableCustomPaginator(){
             this.$router.push('/table-custom-paginator')
         },
+        selectTransition(){
+            this.$router.push('/transitions')
+        }
     }
 }
 </script>
